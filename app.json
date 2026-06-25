@@ -1,0 +1,51 @@
+{
+    "name": "n8n",
+    "description": "n8n - Free and open fair-code licensed node based Workflow Automation Tool. Deploy to Heroku with PostgreSQL.",
+    "keywords": ["n8n", "node", "automation", "workflow", "heroku"],
+    "website": "https://n8n.io",
+    "repository": "https://github.com/n8n-io/n8n-heroku",
+    "logo": "https://raw.githubusercontent.com/n8n-io/n8n-heroku/main/n8n_logo.png",
+    "success_url": "/",
+    "stack": "container",
+    "env": {
+      "GENERIC_TIMEZONE": {
+        "description": "Your timezone (e.g. America/New_York, Europe/London, Asia/Tokyo). Find yours at https://momentjs.com/timezone/.",
+        "value": "UTC"
+      },
+      "N8N_ENCRYPTION_KEY": {
+        "description": "A random 32+ character string used to encrypt credentials. Generate one: openssl rand -hex 20",
+        "value": "change-me-to-a-random-32-char-string"
+      },
+      "WEBHOOK_URL": {
+        "description": "Must match your Heroku app URL. Replace <app-name> with your actual Heroku app name.",
+        "value": "https://<app-name>.herokuapp.com"
+      },
+      "N8N_HOST": {
+        "description": "Your Heroku app hostname (e.g. your-app-name.herokuapp.com). Do NOT include protocol.",
+        "value": "<app-name>.herokuapp.com"
+      },
+      "N8N_PROTOCOL": {
+        "description": "Protocol for webhook URLs. Heroku uses HTTPS.",
+        "value": "https"
+      },
+      "NODE_ENV": {
+        "description": "Node environment. Set to production.",
+        "value": "production"
+      },
+      "DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED": {
+        "description": "SSL is required to connect to Postgres on Heroku.",
+        "value": "false"
+      }
+    },
+    "addons": [
+      {
+        "plan": "heroku-postgresql",
+        "options": {
+          "version": "16"
+        }
+      },
+      {
+        "plan": "papertrail:choklad"
+      }
+    ]
+  }
