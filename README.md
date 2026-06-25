@@ -1,6 +1,6 @@
 # n8n on Heroku
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/YOUR_USERNAME/YOUR_REPO_NAME)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/zamadhassan/n8n-heroku/tree/main)
 
 [n8n](https://n8n.io/) is a free and open fair-code licensed node-based Workflow Automation Tool. This repository provides everything needed to deploy n8n on Heroku with PostgreSQL using your GitHub Student Developer Pack credits.
 
@@ -14,9 +14,10 @@
 
 1. Click the **Deploy to Heroku** button above.
 2. Log in to your Heroku dashboard.
-3. Fill in the required config vars (see [Environment Variables](#environment-variables)).
-4. Click **Deploy App**.
-5. After deployment, click **View** to open n8n.
+3. Set app name (e.g. `n8n-zamadhassan`).
+4. Fill in the config vars (see [Environment Variables](#environment-variables)).
+5. Click **Deploy App**.
+6. After deployment, click **View** to open n8n.
 
 ## Manual Deployment
 
